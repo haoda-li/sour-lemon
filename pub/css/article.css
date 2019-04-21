@@ -1,0 +1,165 @@
+body .article {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.article .article__posts {
+  max-width: 900px;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.article.mdl-layout .mdl-layout__content {
+  padding-top: 80px;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+.article .mdl-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 360px;
+}
+
+.article .mdl-card__media {
+  box-sizing: border-box;
+  background-size: cover;
+  padding: 24px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.article .mdl-card__media a {
+  color: inherit;
+}
+.article .mdl-card__supporting-text {
+  width: 100%;
+  padding: 16px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+}
+.article .mdl-card__supporting-text strong {
+  font-weight: 400;
+}
+.article .mdl-card__media ~ .mdl-card__supporting-text {
+  min-height: 64px;
+}
+.article .mdl-card__supporting-text:not(:last-child) {
+  box-sizing: border-box;
+  min-height: 76px;
+}
+.article:not(.article--post) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.article .meta {
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+}
+.article .meta > .meta__favorites{
+  flex-direction: row;
+  margin: 0 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.article .meta > .meta__favorites .material-icons {
+  font-size: 2em;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.article .meta > *:first-child {
+  margin-right: 16px;
+}
+.article .meta > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.article .article__posts > .nav {
+  margin: 12px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+}
+.article .article__posts > .nav > .nav__button {
+  color: dimgrey;
+  text-decoration: none;
+}
+.article .article__posts > .nav .mdl-button {
+  color: rgba(0,0,0,0.54);
+  background-color: white;
+}
+.article .article__posts > .nav > .nav__button:first-child .mdl-button {
+  margin-right: 16px;
+}
+.article .article__posts > .nav > .nav__button:last-child .mdl-button {
+  margin-left: 16px;
+}
+.article .mdl-card > a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+.article .mdl-card h3 {
+  color: black;
+  margin: 0;
+}
+.article .mdl-card h3 a {
+  text-decoration: none;
+}
+
+.article--post .article__posts > .mdl-card .mdl-card__media {
+  background-image: url('../assets/lemon-background-2.jpg');
+  background-repeat:repeat-y;
+  height: 280px;
+}
+
+.article--post .meta > * {
+  align-items: center;
+}
+
+.article--post .meta + .mdl-card__supporting-text {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.article--post .meta + .mdl-card__supporting-text p {
+  max-width: 512px;
+  margin: 16px auto;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.article .section-spacer {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.article .minilogo {
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 22px;
+    background-color: #F5F5F5;
+}
+
+.material-icons.red { color: red; }

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Material design CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+  <link rel="stylesheet" href="/pub/css/header.css">
+  <link rel="stylesheet" href="/pub/css/global.css">
+  <link rel="stylesheet" href="/pub/css/article.css">
+  <link rel="icon" href="/pub/assets/logo_text.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Sour Lemon</title>
+</head>
+
+<body>
+  <div class="hidden" id="id_f">{{id}}</div>
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+    </header>
+    <div class="mdl-layout__drawer">
+    </div>
+
+    <div class="article article--post mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="article__posts mdl-grid">
+          <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3 id="title_f">Can't find the article</h3>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta" id="userLogo">
+              <!--<img class="minilogo" src=""></img>-->
+              <div>
+                <strong id="author_f"></strong>
+              </div>
+              <div class="section-spacer"></div>
+              <div class="meta__favorites">
+                <span id="like_f">0</span> <i class="material-icons" role="presentation" id="likebtn">favorite</i>
+                <span class="visuallyhidden">favorites</span>
+              </div>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text" id="text_f">
+
+            </div>
+          </div>
+
+          <!--<nav class="nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+            <a href="article.html" class="nav__button">
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+              </button>
+              Previous
+            </a>
+            <div class="section-spacer"></div>
+            <a href="article.html" class="nav__button">
+              Next
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+              </button>
+            </a>
+          </nav>-->
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="text/javascript" src="/pub/scripts/header.js"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="/pub/scripts/load_article.js"></script>
+
+</body>
+
+</html>

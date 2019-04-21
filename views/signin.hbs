@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Material design CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+  <link rel="icon" href="/pub/assets/logo_text.png">
+  <link rel="stylesheet" href="/pub/css/header.css">
+  <link rel="stylesheet" href="/pub/css/sign_in_up.css">
+  <link rel="stylesheet" href="/pub/css/global.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Sour Lemon, sign in</title>
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout">
+
+
+    <header class="mdl-layout__header">
+    </header>
+    <div class="mdl-layout__drawer">
+    </div>
+
+
+
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <div class="user">
+          <header class="user__header">
+            <img src="/pub/assets/logo_text.png" class="logo_large" />
+            <h1 class="user__title" id="prompt">Welcome Back!</h1>
+          </header>
+
+          <form class="form">
+            <input type="text" placeholder="Email" class="form__input" id="username" />
+            <input type="password" placeholder="Password" class="form__input" id="password" />
+            <input class="btn" type="button" id="register_btn" value="Sign In">
+            <br>
+            <center>
+              <a href="/signup" class="general_text">Not a member yet? Sign Up!</a>
+            </center>
+          </form>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+
+
+  <script type="text/javascript" src="/pub/scripts/header.js"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="/pub/scripts/signin.js"></script>
+</body>
+
+</html>

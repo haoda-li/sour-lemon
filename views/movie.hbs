@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Material design CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="icon" href="/pub/assets/logo_text.png">
+  <link rel="stylesheet" href="/pub/css/header.css">
+  <link rel="stylesheet" href="/pub/css/movie.css">
+  <link rel="stylesheet" href="/pub/css/global.css">
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>Sour Lemon</title>
+</head>
+
+
+
+<body>
+
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+    </header>
+    <div class="mdl-layout__drawer">
+    </div>
+
+
+
+
+
+    <main class="mdl-layout__content">
+      <div class="hidden" id="mid">{{mid}}</div>
+      <div class="hidden" id="user_status">{{user}}</div>
+      <div class="page-content">
+
+        <div id="main_back">
+        </div>
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" id="iv_tab">
+          <div class="mdl-tabs__tab-bar">
+            <a href="#image-panel" class="mdl-tabs__tab is-active white index_text">Overview</a>
+            <a href="#video-panel" class="mdl-tabs__tab white index_text">Trailer</a>
+          </div>
+
+          <div class="mdl-tabs__panel is-active white" id="image-panel">
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+              </div>
+              <div id="main_info" class="mdl-cell--middle mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                <h1 id="title" class="index_text"></h1>
+                <p class="index_text yellow">Release Date
+                  <span id="release_date" class="index_text white"></span>
+                </p>
+
+                <div id="sour_rate"><span class="yellow index_text"></span></div>
+                <h4 class="index_text yellow">Overview</h4>
+                <p id="overview" class="general_text"></p>
+                <button id="add_collection" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                  <i class="material-icons">{{col_icon}}</i>
+                </button><span class="yellow index_text"> {{col_text}}</span>
+              </div>
+              <div class="mdl-cell--middle mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <img id="poster" src="/pub/assets/lemon.png" alt="Poster not found">
+              </div>
+              <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+              </div>
+            </div>
+          </div>
+          <div class="mdl-tabs__panel" id="video-panel">
+            <center>
+              <iframe id="youtube_video" src="youtube.com" frameborder="0" allowfullscreen>
+              </iframe>
+            </center>
+          </div>
+        </div>
+        <div id="content_page">
+
+          <div class="mdl-grid" id="sub_info_grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+            <div id="cast_info" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+              <p class="index_text yellow section black_back">Featured Crew and Cast</p>
+
+            </div>
+
+            <div id="sub_info" class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
+              <p class="index_text section yellow_back">More Information</p>
+              <p class="index_text yellow">Status
+                <span id="status" class="general_text white">Unknown</span>
+              </p>
+              <p class="index_text yellow">Runtime
+                <span id="runtime" class="general_text white">Unknown</span>
+              </p>
+              <p class="index_text yellow">Budget
+                <span id="budget" class="general_text white">Unknown</span>
+              </p>
+              <p class="index_text yellow">Revenue
+                <span id="revenue" class="general_text white">Unknown</span>
+              </p>
+
+              <p class="index_text yellow">Language</p>
+              <p id="spoken_languages" class="general_text white">Unknown</p>
+
+              <p class="index_text yellow">Home page</p>
+              <p class="general_text white"><a id="homepage">Unknown</a></p>
+
+              <p class="index_text yellow">Genres</p>
+              <p id="genres" class="general_text white">Unknown</p>
+
+              <p class="index_text yellow">Production</p>
+              <p id="production_companies" class="general_text white">Unknown</p>
+
+              <p class="index_text yellow">Production countries</p>
+              <p id="production_countries" class="general_text white">Unknown</p>
+
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+          </div>
+
+          <div class="mdl-grid" id="story_grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+            <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone">
+              <div class="index_text yellow section black_back">
+                <span>Stories</span>
+              </div>
+              <div>
+                <button id="create_story" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  create your story
+                </button>
+              </div>
+              <div id="stories">
+
+              </div>
+              <div>
+                <button id="load_story" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  load more stories
+                </button>
+              </div>
+
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+            <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone">
+              <p class="black_back yellow section index_text">Comments</p>
+              <form action="#" class="white_back" id="review_form">
+                <div class="mdl-textfield mdl-js-textfield" id="review_input">
+                  <textarea class="mdl-textfield__input" rows="3" maxlength="180" id="review_input_text"></textarea>
+                  <label class="mdl-textfield__label" for="review_input_text">Post your comment</label>
+                </div>
+                <div id="submit_rating">
+                  <input id="star1" class="rating_star" type="checkbox">
+                  <label for="star1" class="rating_label"></label>
+                  <input id="star2" class="rating_star" type="checkbox">
+                  <label for="star2" class="rating_label"></label>
+                  <input id="star3" class="rating_star" type="checkbox">
+                  <label for="star3" class="rating_label"></label>
+                  <input id="star4" class="rating_star" type="checkbox">
+                  <label for="star4" class="rating_label"></label>
+                  <input id="star5" class="rating_star" type="checkbox">
+                  <label for="star5" class="rating_label"></label>
+                </div>
+                <input value="Sourly comment" type="submit" id="submit_review_btn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+              </form>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+          </div>
+
+          <div class="mdl-grid" id="review_grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+            <div class="mdl-cell mdl-cell--4-col" id="review_cell_left">
+
+
+            </div>
+            <div class="mdl-cell mdl-cell--4-col" id="review_cell_right">
+
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+            <div class="mdl-cell mdl-cell--8-col">
+              <button id="load_comments" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                load more comments
+              </button>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+            </div>
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="error_toast" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+  </div>
+  <script type="text/javascript" src="/pub/scripts/header.js"></script>
+  <script src="/pub/scripts/load_movie.js"></script>
+  <script src="/pub/scripts/movie_event.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+#main_back{
+    height: 100vh;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: contrast(0.6) brightness(0.3);
+    z-index: -1;
+}
+
+#youtube_video {
+  height: 84vh;
+  width: 90vw;
+  max-width: 144vh;
+}
+
+#main_info {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+#main_info::-webkit-scrollbar{
+  color: black;
+}
+
+#release_date{
+  font-size: 16px;
+}
+
+#sour_rate{
+  font-size: 16px;
+}
+
+#poster {
+  width: 28vw;
+  max-height: 80vh;
+  float: right;
+}
+
+#content_page{
+  top: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+#cast_info{
+  background-color: white;
+}
+
+#sub_info {
+  background-color: dimgrey;
+}
+#sub_info p{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cast_card{
+  height: 240px;
+  width: 160px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.cast_card > .mdl-card__title{
+  background-size: cover;
+  background-color: black;
+  background-position: top center;
+  height: 160px;
+}
+
+.cast_card > .mdl-card__supporting-text {
+  background-color: dimgrey;
+  font-size: 10px;
+  float: bottom;
+  height: 80px;
+  color: white;
+}
+
+
+.story_card.mdl-card {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.story_card > .mdl-card__title {
+  color: #fff;
+}
+.story_card > .mdl-card__menu {
+  color: #fff;
+}
+
+#review_form{
+  padding: 20px;
+}
+
+#review_input{
+  width: 100%;
+  background-color: white;
+}
+
+.review{
+  margin-top: 10px;
+}
+
+.user_portriat{
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
+  background-color: white;
+  margin: 10px;
+  border: 3px solid orange;
+}
+
+.review_content{
+  background-color: white;
+  width: 100%;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+    color: rgb(243, 209, 0);
+}
+
+
+#submit_rating{
+  display: inline-block;
+  margin: 10px;
+}
+
+.rating_star {
+    display:none;
+}
+.rating_star + label{
+    background:url('/pub/assets/lemon.png') center / cover;
+    height: 32px;
+    width: 32px;
+    display:inline-block;
+    filter: brightness(0.8);
+    opacity: 0.5;
+    padding: 0 0 0 0px;
+}
+.rating_star:checked + label, .rating_star_img{
+  background:url('/pub/assets/lemon.png') center / cover;
+  height: 32px;
+  width: 32px;
+  display:inline-block;
+  filter: brightness(1);
+  opacity: 1;
+  padding: 0 0 0 0px;
+}
+
+.review_stat_placer{
+  display: inline-block;
+  float: right;
+  position: relative;
+  margin-top: 22px;
+  margin-right: 20px;
+}
+
+
+.review_rating_placer{
+  display: inline-block;
+  padding: 5px;
+  border-radius: 21px;
+  background-color: white;
+  width: 160px;
+  margin-top: 16px;
+  margin-right: 20px;
+  float: right;
+  position: relative;
+}
+
+#submit_review_btn{
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.review_content{
+  padding: 10px;
+  box-sizing: border-box;
+  word-break: break-all;
+  font-size: 12pt;
+  height: 100px;
+  overflow: auto;
+}
+
+#create_story{
+  margin: 20px 5px 20px 0px;
+}
+
+.mdl-card__supporting-text{
+  max-height: 50px;
+}
+
+.mdl-card__title{
+  background-image: url("/pub/assets/lemon-background-2.jpg")
+}

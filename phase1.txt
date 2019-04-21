@@ -1,0 +1,87 @@
+Header
+ - across all pages
+ - Search bar can search movie by title or ID, it links to the movie page directly. (This will be implemented in phase 2)
+ - Both logo and whatshot icon link to the main page.
+ - The person_outline icon links to the signin page where user can also go to the sign up page.
+ - There is a drawer on the left designed for small screen.
+
+
+Main Page
+ - includes index.html
+ - When user scoll down the page, different recommended movies(such as top 10 action movies 2000-2019) will show.
+ 	- (Those moives will be created based on database in phase 2) 
+ - By pressing the equalizer button on the top-right of the page or in the drawer, main page will play music.
+ - For each poster on the main page, clicking it will link to the corresponding movie page. (For now there is only one movie page)
+
+
+Movie Page
+ - includes movie.html, article.html, editor.html
+ - Visitor and User are about to view the information, trailer, stories, and comments about the movie, and thumb up for comments.
+ - User is able to add the movie to collection and write comment and rate the movie.
+ - Visitors cannot add to collection or write or rate.
+   However, because the limitation of phase 1, you have to change const userID = "Lemon12345" to
+   const userID = "" in line4 of movie_event.js to see how the visitor interactions behaves
+ - The user/visitor can press "LOAD MORE COMMENTS", "LOAD MORE STORIES", and reacts just like it suggests
+ - The user/visitor can press "READ MORE" on each article and go to the specific "article" page
+ - If the user is "sour pro" (explain in User Profile and Auth section), the user can press "CREATE YOUR STORY" and go to the article editor to create their stories,
+   the stories will then be reviewed by admin to approve or reject.
+   (in phase 1, we assume the user is a "sour pro", in phase 2, we will remove the button if the user is not a "sour pro")
+
+
+User Profile and Auth
+ - includes user_main.html, signin.html, signup.html
+ - So far for phase 1, there is only one user page for both sour Pro and sour User
+ - For sign in
+ 	- If sign in with user account, the page will jump to the user main page.
+ 	- If sign in with admin account, the page will jump to the admin page.
+ 	- Otherwise the page will show incorrect username or password.
+ 	- Can jump to the signup page
+ - For sign up
+ 	- If username or email already exists, there will be warnings and sign up will not succeed.
+ 	- If sign up succeed, the page will jump the the user main page.
+ 	- Can jump to the signin page
+ - For Short reviews tab
+    - Users are able to view and delete the short reviews written by their self.
+    - In phase 2, we will dynamically generate short reviews from the database.
+ - For Articles tab
+    - Users are able to delete the articles written by their self directly from the main page.
+    - Users can be redirect to the page that contains the article they have written.
+    - In phase 2, we will dynamically generate each article element from the database.
+ - For Collections tab
+    - Users are able to view the movies they collected.
+    - Will be added dynamically from server.
+ - For my Account tab
+    - Users are able to modify their portrait by click on the portrait.
+    - Users are able to change user name, first and last name, descriptions and password from my Account tab.
+    - All data storage will be implemented in phase 2.
+ - Follower
+    - Users are able to follow each other by click follow button on the right upper corner.
+    - Users can unfollow others, by click that button again.
+    - In phase 2 we will record each user's followers.
+ - Achievements
+    - Achievements that a user can receive from the system.
+    - Can be add dynamically from data provided by the server.
+
+
+Admin Account
+ - includes admin.html
+ - Deal with Articles
+ 	- For articles under review, admin can approve an article, then the article will be removed from 'Articles waiting for approval' and added to 'Approved Articles'
+ 	- For articles under review, admin can reject an article, then the article will be removed from 'Articles waiting for approval'
+ 	- For approved articles, admin can delete them.
+ 	- For all articles, if admin click 'Read more', he will be redirected to the corresponding article page (for now there is only one article page).
+ 	- Search will be implemented in phase 2.
+ - Deal with Short Reviews
+ 	- For all short reviews, admin can delete them.
+ 	- Search will be implemented in phase 2.
+ - Deal With Movies
+ 	- For all movies exists, admin can delete them.
+ 	- By clicking the '+' button, text fields will occur and admin can fill in the form then click '+' again to add a new movie.
+ 	- To hide the form, just leave the text fields blank then click '+'.
+ - Deal With Users
+ 	- For all users exists, admin can delete them.
+ 	- By clicking the '+' button, text fields will occur and admin can fill in the form then click '+' again to add a new user.
+ 	- To hide the form, just leave the text fields blank then click '+'.
+ 	- For all users, admin can ban/permit them, and their status will become 'banned'/'Sour User'
+ 	- For all users, admin can promote/demote them, and their status will become 'Sour Pro'/'Sour User'
+ 	- Admin can change the password. (This will be implemented in phase 2)

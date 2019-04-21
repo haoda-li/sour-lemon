@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Material design CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+  <link rel="icon" href="/pub/assets/logo_text.png">
+  <link rel="stylesheet" href="/pub/css/header.css">
+  <link rel="stylesheet" href="/pub/css/global.css">
+  <link rel="stylesheet" href="/pub/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Sour Lemon</title>
+  {{!-- <iframe controls autoplay autoplay id="audio" src="/pub/assets/audio.mp4"></iframe> --}}
+	{{!-- https://mr3.doubanio.com/cdc0f203b6d5da78025a9b21117e9382/0/fm/song/p2937378_128k.mp4 --}}
+	<iframe controls autoplay autoplay id="audio" src="https://mr3.doubanio.com/b1dce1982d6f0560234458b32c4c4df3/0/fm/song/p2694025_64k.mp4"></iframe>
+</head>
+
+<body>
+  	<div class="mdl-layout mdl-js-layout">
+		<header class="mdl-layout__header ">
+	      <div class="mdl-layout__header-row black_back ">
+	        <!-- Add spacer, to align navigation to the right -->
+	        <a href="index">
+	          <img src="/pub/assets/logo.png" class="header-logo">
+	          <img src="/pub/assets/logo_text_line.png" class="header-logo">
+	        </a>
+	        <div class="mdl-layout-spacer"></div>
+	        <!-- Navigation -->
+	        <nav class="mdl-navigation">
+	          <div class="mdl-textfield mdl-js-textfield">
+	            <input class="mdl-textfield__input white white" type="text" id="search_input" placeholder="Search Movie title or ID">
+	            <label class="mdl-textfield__label" for="search_input"></label>
+	          </div>
+	          <button class="mdl-navigation__link yellow_icon" id="nav_search_button">
+       				 <i class="material-icons yellow">search</i>
+    				</button>
+	          <a class="mdl-navigation__link yellow_icon" href="popular">
+	            <i class="material-icons yellow">whatshot</i>
+	          </a>
+	          <a class="mdl-navigation__link yellow_icon" href="signin">
+	            <i class="material-icons yellow">person_outline</i>
+	          </a>
+	          <span class="mdl-navigation__link yellow_icon" id="anchorAudio">
+	            <i class="material-icons  yellow equalizer">equalizer</i>
+	          </span>
+	        </nav>
+	      </div>
+	    </header>
+
+	    <div class="mdl-layout__drawer">
+	      <span class="mdl-layout__title">
+	        <img src="/pub/assets/logo_text_line.png" class="header-logo"></span>
+	      <nav class="mdl-navigation">
+	        <div class="mdl-textfield mdl-js-textfield">
+	          <input class="mdl-textfield__input white white" type="text" id="search_input2" placeholder="Search Movie title or ID">
+	          <label class="mdl-textfield__label" for="search_input"></label>
+	        </div>
+	        <a class="mdl-navigation__link" id="drawer_search_button">
+        	<i class="material-icons yellow">search</i>
+        		<span class="general_text yellow">Search</span>
+   			 	</a>
+	        <a class="mdl-navigation__link" href="popular">
+	          <i class="material-icons yellow">whatshot</i>
+	          <span class="general_text yellow">Now playing...</span>
+	        </a>
+	        <a class="mdl-navigation__link" href="signin">
+	          <i class="material-icons yellow">person_outline</i>
+	          <span class="general_text yellow">User Profile</span>
+	        </a>
+	        <span class="mdl-navigation__link yellow" href="" id="anchorAudio2">
+	          <i class="material-icons yellow equalizer">equalizer</i>
+	          <span class="drawer_text yellow">Play</span>
+	        </span>
+	      </nav>
+	    </div>
+	</div>
+
+	<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+  </div>
+	<!-- Content -->
+	<!-- Starting page -->
+	<div class="transform-board">
+		<div class="pages-container">
+			<div class="rating-page-container">
+				<div class="rating-page-wrap">
+					<div class="page-content-wrap">
+						<div class="page-content">
+							<div class="background-image" id="background-starting-image"></div>
+							<div class="full-screen-video-wrap">
+								<video autoplay muted loop src="/pub/assets/mp4ieannual2018.mp4"></video>
+							</div>
+							<div class="logo-container yellow">
+		         				<img src="/pub/assets/logo.png" class="lemon-logo">
+		         				<img src="/pub/assets/logo_text_line.png" class="name-logo">
+		        			</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+			<div class="rating-page-container">
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript" src="/pub/scripts/main.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

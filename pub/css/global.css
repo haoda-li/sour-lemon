@@ -1,0 +1,82 @@
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 14px;
+  background-size: 200% 100% !important;
+  height: 100vh;
+  background-color: lightyellow
+}
+
+.black_back{
+    background-color: dimgrey;
+}
+
+.light_yellow_back{
+  background-color: lightyellow;
+}
+
+.white {
+  color: white;
+}
+
+.lemon_icon {
+  height: 32px;
+  width: 32px;
+}
+
+.index_text {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.general_text {
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.black{
+  color: dimgrey;
+}
+
+.orange{
+  color: orange;
+}
+
+.yellow, .yellow_icon, .mdl-layout .mdl-layout__drawer-button{
+    color: rgb(243,209,0);
+    opacity: 1;
+}
+.yellow_icon:hover{
+    background: linear-gradient(to bottom, grey, rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.grey {
+  color: dimgrey;
+}
+
+.yellow_back{
+  background-color: rgb(243,209,0);
+}
+
+.white_back{
+  background-color: white;
+}
+
+.mdl-layout__header-row a{
+  text-decoration: none;
+}
+
+/*Page*/
+.mdl-navigation__link:hover{
+  cursor: pointer;
+  outline:0;
+}
+
+.section{
+  padding: 5px 20px 5px 20px;
+  margin: 0px;
+}
+
+.hidden{
+  display: none;
+}

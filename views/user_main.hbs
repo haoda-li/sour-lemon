@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Material design CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+  <link rel="stylesheet" href="/pub/css/header.css">
+  <link rel="stylesheet" href="/pub/css/global.css">
+  <link rel="stylesheet" href="/pub/css/movie_list.css">
+  <link rel="icon" href="/pub/assets/logo_text.png">
+  <!-- CSS for this file -->
+  <link rel="stylesheet" href="/pub/css/user_main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>User Main Page</title>
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout">
+
+
+
+
+    <header class="mdl-layout__header">
+    </header>
+    <div class="mdl-layout__drawer">
+    </div>
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <!-- Other than changes to the header, all content should go here -->
+        <div class="user_information_container">
+          <div class="portrait_and_info_container">
+            <div class="user_portrait_container" id="portrait_container1">
+              <img class="user_portrait" src="{{ avatar }}" alt="user portrait">
+              <span href="" class="portrait_link">
+                <input type="file" accept="image/*">
+                <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" value="Change portrait">
+              </span>
+            </div>
+            <div class="user_information">
+              <h3 title="User Name" id="user_name">
+                {{ username }}
+              </h3>
+              <div>
+                <p id="user_description">
+                  {{{ description }}}
+                </p>
+              </div>
+              <a id="log_out" href="/admin/logout" class="mdl-button mdl-js-button mdl-button--raised">
+                Log Out
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <!--Mdl tabs-->
+          <div class="functional_area fix_width">
+            <div class="mdl-card right_side_bar" id="follow_data">
+              <div class="black_back section">
+                <div id="follower">
+                  <h5 class="general_text white">Followers</h5>
+                  <h3 class="index_text yellow">{{ followers }}</h3>
+                </div>
+                <div id="following">
+                  <h5 class="general_text white">Following</h5>
+                  <h3 class="index_text yellow">{{ following }}</h3>
+                </div>
+                <!--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="follow_button">follow</button>-->
+              </div>
+            </div>
+            <div class="mdl-card right_side_bar" id="achievement">
+              <h5 class="general_text black section">achievements</h5>
+              <!--For add achievements-->
+            </div>
+
+            <div class="mdl-tabs mdl-js-tabs" id="user_main_tabs">
+              <div class="mdl-tabs__tab-bar">
+                <a href="#short_review" class="mdl-tabs__tab is-active">Short Reviews</a>
+                  {{{ articleTab }}}
+                <a href="#collections" class="mdl-tabs__tab">Collections</a>
+                <a href="#my_account" class="mdl-tabs__tab">My Account</a>
+              </div>
+
+              <div class="mdl-tabs__panel is-active" id="short_review">
+                <div id="admin-short-reviews">
+                  <ul class="demo-list-three mdl-list full_width">
+                    <!--For add short reviews-->
+                  </ul>
+                  <button class="mdl-button mdl-js-button mdl-button--raised load" id="loadMoreReviews">
+                    Load more reviews
+                  </button>
+                </div>
+              </div>
+
+              <div class="mdl-tabs__panel" id="articles">
+                <!--For add articles-->
+                <div id="allArticles">
+
+                </div>
+                <button class="mdl-button mdl-js-button mdl-button--raised load" id="loadMoreArticle">
+                  Load more article
+                </button>
+              </div>
+              <!--collection of user's favourite movie-->
+              <div class="mdl-tabs__panel" id="collections">
+                <div id="moviePosters">
+                  <!--For add movie posters-->
+                </div>
+              </div>
+
+              <div class="mdl-tabs__panel" id="my_account">
+                <form action="#" id="userInfoForm">
+                  <h3>User Profile</h3>
+                  <hr>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="^[A-Za-z0-9]*$" id="username" />
+                    <label class="mdl-textfield__label" for="username">Username</label>
+                    <span class="mdl-textfield__error">No empty and no spaces, please!</span>
+                  </div>
+                  <br>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows="3" maxlength="200" id="description"></textarea><label class="mdl-textfield__label" for="description">
+                      Your user description<br>max 200 characters</label>
+                  </div>
+                  <br>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <!--pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"-->
+                    <input class="mdl-textfield__input" type="password" id="newPassWord" />
+                    <label class="mdl-textfield__label" for="newPassWord">New Pass Word</label>
+                    <span class="mdl-textfield__error">Only Upper Case, Lower Case and Number Please</span>
+                  </div>
+                  <br>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <!--pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"-->
+                    <input class="mdl-textfield__input" type="password" id="oldPassWord" />
+                    <label class="mdl-textfield__label" for="oldPassWord">Old Pass Word</label>
+                    <span class="mdl-textfield__error">Only Upper Case, Lower Case and Number Please</span>
+                  </div>
+                  <div class="section">
+                    <br>
+                    <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Update Information" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+  </div>
+
+
+  <script type="text/javascript" src="/pub/scripts/header.js"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script type="text/javascript" src="/pub/scripts/user_main.js"></script>
+</body>
+
+</html>

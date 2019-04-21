@@ -1,0 +1,49 @@
+.user {
+  width: 100%;
+  max-width: 340px;
+  margin: 10vh auto;
+}
+
+.user__header {
+  text-align: center;
+  opacity: 1;
+}
+
+.user__title {
+  font-size: 20px;
+  margin-bottom: -10px;
+  font-weight: 500;
+  color: black;
+}
+
+.form {
+  margin-top: 40px;
+  border-radius: 6px;
+  opacity: 1;
+
+}
+
+.form__input {
+    display: block;
+    width: 88%;
+    height: 20px;
+    padding: 20px;
+    border: 0;
+    outline: 0;
+}
+.form__input:focus {
+  background: #f7f7f7;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  outline: 0;
+  border: 0;
+  color: white;
+  background: dimgrey;
+}
+.btn:hover {
+  background: gold;
+}

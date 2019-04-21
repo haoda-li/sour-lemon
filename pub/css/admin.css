@@ -1,0 +1,136 @@
+h1{
+	font-size: 25px;
+}
+
+.bannerPic {
+	display: block;
+	width: 100%;
+	height: 250px;
+}
+
+#banner {
+	background-image: url("/pub/assets/lemon-background-2.jpg");
+	background-repeat: repeat;
+}
+#profileStats {
+	padding: 5px;
+	background-color: dimgrey;
+}
+
+#bigProfilePicCircle {
+	position:absolute;
+	top: 150px;
+	left: 250px;
+	width: 200px;
+	border-radius: 50%;
+	border: solid white;
+	z-index: 3;
+}
+
+.introduction{
+	padding-top: 20px;
+	padding-left: 320px;
+	height: 60px;
+	color: white;
+}
+
+.adminProfile{
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top: 20px;
+
+}
+
+.functionalArea{
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top: 30px;
+}
+
+.mdl-tabs__panel{
+	color:dimgrey;
+}
+
+.storyCard.mdl-card {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.storyCard > .mdl-card__title {
+  color: #fff;
+  background: url('../assets/lemon-background.jpg')
+}
+
+.storyCard > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.adminShortReviews{
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.adminShortReviews li{
+	background: white;
+	flex-basis: 28%;
+}
+
+.mdl-data-table{
+	width:100%;
+}
+
+.mdl-tabs__panel > .mdl-button{
+	float: right;
+	margin-top: 10px;
+}
+
+
+.mdl-tabs__panel > .search-button {
+	display: inline-block;
+	float: none;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.red{
+	color: red
+}
+
+.mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
+    text-align: center;
+}
+
+#addMovieForm{
+	display: none;
+	float: right;
+}
+
+#addUserForm{
+	display: none;
+	float: right;
+}
+
+#userInfoForm{
+	text-align: center;
+}
+
+#prompt{
+	text-align: center;
+}
+.logout{
+	display: inline;
+	float: right;
+	margin-top: -65px;
+    margin-right: 200px;
+}
+
+.mdl-card__supporting-text{
+  max-height: 50px;
+}
+
+.center-align{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}

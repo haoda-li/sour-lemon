@@ -1,0 +1,225 @@
+/*the user container*/
+.user_information_container{
+    position: relative;
+    width: 1100px;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background: #00b9d8 url("../assets/user_main/user_background_1.jpg");
+    box-shadow:1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.portrait_and_info_container{
+    position: absolute;
+    bottom: 2px;
+    width: 1100px;
+
+}
+
+.portrait_link input{
+    justify-content: center;
+    width: 175px;
+}
+
+.user_portrait_container{
+    position: relative;
+    float: left;
+    width: 256px;
+    height: 256px;
+    border: 2px solid hsla(0,0%,100%,.4);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 30px;
+    z-index: 1;
+}
+
+.user_portrait{
+    display: block;
+    width: 256px;
+    height: 256px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.user_information{
+    height: 110px;
+    position: relative;
+    top: 128px;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+/*link to change portrait picture*/
+.portrait_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 256px;
+    background: rgba(0,0,0,.6);
+    font-size: 24px;
+    color: white;
+    line-height: 128px;
+    text-align: center;
+    opacity: 0;
+    border-radius: 50%;
+}
+.portrait_link:hover{
+    opacity: unset;
+}
+
+/*text in the user container*/
+#user_name{
+    color: white;
+    text-shadow: 1px 1px 2px lightyellow;
+}
+
+#user_description{
+    position: relative;
+    bottom: 10px;
+    color: white;
+}
+
+#user_description_button{
+    height: 30px;
+}
+
+/*material lab tabs*/
+.functional_area{
+    width: 1100px;
+    margin-top: 30px;
+}
+
+#user_main_tabs{
+    width: 824px;
+    box-shadow:1px 1px 2px rgba(0,0,0,0.5);
+    background: white;
+    min-height: 750px;
+}
+
+/*add some shadow to tag bar*/
+.mdl-tabs__tab-bar{
+    box-shadow:1px 1px 2px rgba(0,0,0,0.5);
+}
+/*side bar in functional area*/
+.right_side_bar{
+    width: 256px;
+    float: right;
+    clear: right;
+    box-shadow:1px 1px 2px rgba(0,0,0,0.5);
+    background: dimgrey;
+    padding: 10px;
+}
+
+#achievement{
+    padding: 20px;
+}
+
+#follow_data{
+    text-align: center;
+}
+
+#following{
+    padding-bottom: 10px;
+}
+
+.centered{
+    justify-content: center;
+}
+
+#achievement{
+    text-align: center;
+}
+
+#achievement{
+    margin-top: 10px;
+    background-image: url("../assets/lemon.png");
+    background-repeat: repeat;
+    background-color: rgb(243,209,0);
+}
+
+.achievement_each{
+    padding: 10px;
+    background-color: rgba(255,255,255,0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 1. Short reviews*/
+.mdl-list__item-primary-content a{
+    text-decoration: none;
+}
+
+/* 2. for Article panel*/
+.story_card.mdl-card {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#admin-short-reviews{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#articles .story_card > .mdl-card__title {
+    color: #fff;
+    background: url(../assets/lemon-background-2.jpg) center / cover;
+}
+
+/* 3. Collections of users favourite movies*/
+.moviePosters{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-card{
+    margin: 10px;
+    padding-right: 0;
+    text-decoration: none;
+}
+
+/*4. user info form*/
+#userInfoForm{
+    text-align: center;
+}
+
+.fix_width{
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.float_right{
+    float: right;
+}
+
+.full_width{
+    width: 100%;
+}
+
+.poster{
+    width:100%;
+    height:auto;
+}
+
+#log_out{
+    position:absolute;
+    right:10px;
+    bottom: 10px;
+}
+
+.mdl-card__supporting-text{
+  max-height: 50px;
+}
+
+.load{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#allArticles{
+    min-height: 16px;
+}

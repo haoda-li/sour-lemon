@@ -1,0 +1,208 @@
+Header
+ - across all pages
+ - Search bar can search movie by title, it links to the movie page directly. (This will be implemented in phase 2)
+ - Both logo and whatshot icon link to the main page.
+ - The person_outline icon links to the signin page where user can also go to the sign up page.
+ - There is a drawer on the left designed for small screen.
+
+
+Main Page
+ - includes index.hbs
+ - When user scoll down the page, different recommended movies(such as top 10 action movies 2006-2019) will show.
+ 	- (Those moives are generated based on database. One poster of them will be chosen and show on the page)
+ - By pressing the equalizer button on the top-right of the page or in the drawer, main page will play music.
+ - For each poster on the main page, clicking it will link to the corresponding movie page.
+
+Search Page
+ - includes search.hbs
+ - User is able to view the search result and popular movies
+ - Initially at most 20 movies will be shown in this page. When user press "LOAD MORE MOVIES", another 20 movies will be loaded.
+
+Movie Page
+ - includes movie.html, article.html, editor.html
+ - Visitor and User are about to view the information, trailer, stories, and comments about the movie, and thumb up for comments.
+ - User is able to add the movie to their collections and write comment and rate the movie.
+ - Visitors cannot add to collection, write comments, rate, or write stories in the editor.
+ - The user/visitor can press "LOAD MORE COMMENTS", "LOAD MORE STORIES", and reacts just like it suggests
+ - The user/visitor can press "READ MORE" on each article and go to the specific "article" page
+ - If the user is "sour pro" (explain in User Profile and Auth section), the user can press "CREATE YOUR STORY" and go to the article editor to create their stories, the stories will then be reviewed by admin to approve or reject.
+ - Press the profile image of the comments, you can go to the specific user's profile page and view their profile
+
+User Profile and Auth
+ - includes user_main.html, signin.html, signup.html
+ - So far for phase 1, there is only one user page for both sour Pro and sour User
+ - For sign in
+ 	- If sign in with user account, the page will jump to the user main page.
+ 	- If sign in with admin account, the page will jump to the admin page.
+ 	- Otherwise the page will show incorrect username or password.
+ 	- Can jump to the signup page
+ - For sign up
+ 	- If username or email already exists, there will be warnings and sign up will not succeed.
+ 	- If sign up succeed, the page will jump the the user main page.
+ 	- Can jump to the signin page
+ - For Short reviews tab
+    - Users are able to view and delete the short reviews written by their self.
+    - In phase 2, we will dynamically generate short reviews from the database.
+ - For Articles tab
+    - Users are able to delete the articles written by their self directly from the main page.
+    - Users can be redirect to the page that contains the article they have written.
+    - In phase 2, we will dynamically generate each article element from the database.
+ - For Collections tab
+    - Users are able to view the movies they collected.
+    - Will be added dynamically from server.
+ - For my Account tab
+    - Users are able to modify their portrait by click on the portrait.
+    - Users are able to change user name, first and last name, descriptions and password from my Account tab.
+    - All data storage will be implemented in phase 2.
+ - Follower
+    - Users are able to follow each other by click follow button on the right upper corner.
+    - Users can unfollow others, by click that button again.
+    - In phase 2 we will record each user's followers.
+ - Achievements
+    - Achievements that a user can receive from the system.
+    - Can be add dynamically from data provided by the server.
+
+
+Admin Account
+ - includes admin
+ - There is only one admin for this website and we can't add/change/delete admin directly (except password).
+ - Deal with Articles
+ 	- For articles under review, admin can approve an article, then all articles will display again.
+ 	- For articles under review, admin can reject an article, then the article will be removed from 'Articles waiting for approval' and deleted from the database.
+ 	- For approved articles, admin can delete them.
+ 	- For all articles, if admin click 'Read more', he/she will be redirected to the corresponding article page.
+ 	- Admin can enter movie ID or arthur name or both to search articles.
+    - After search, admin can clear all inputs and click 'search' button again, then there shows all articles.
+    - By clicking "load more unreviewed/reviewed articles", there shows more articles and if there is no more, the button will be disabled.
+    - If admin searches something then clicks "load more unreviewed/reviewed articles", there shows articles that follows the search input.
+    - Only when admin refresh the page/clear all inputs then click "search" button will the "load more unreviewed/reviewed articles" button shows all other articles.
+ - Deal with Short Reviews
+ 	- For all short reviews, admin can delete them.
+ 	- Search will be implemented in phase 2.
+    - Admin can enter movie ID or arthur name or both to search comments.
+    - After search, admin can clear all inputs and click 'search' button again, then there shows all comments.
+    - By clicking "load more comments", there shows more comments and if there is no more, the button will be disabled.
+    - If admin searches something then clicks "load more comments", there shows articles that follows the search input.
+    - Only when admin refresh the page/clear all inputs then click "search" button will the "load more comments" button shows all other comments.
+ - Deal With Movies
+ 	- For all movies exists, admin can delete them.
+ 	- By clicking the '+' button, text fields will occur and admin can fill in the form then click '+' again to add a new movie.
+ 	- To hide the form, just leave the text fields blank then click '+'.
+    - Admin can enter movie ID or title to search movies.
+    - After search, admin can clear all inputs and click 'search' button again, then there shows all movies.
+    - By clicking "load more movies", there shows more movies and if there is no more, the button will be disabled.
+    - If admin searches something then clicks "load more movies", there shows movies that follows the search input.
+    - Only when admin refresh the page/clear all inputs then click "search" button will the "load more movies" button shows all other movies.
+ - Deal With Users
+ 	- For all users exists, admin can delete them.
+ 	- For all users, admin can promote/demote them, and their status will become 'Sour Pro'/'Sour User'
+    - Admin can enter username to search users.
+    - After search, admin can clear all inputs and click 'search' button again, then there shows all users.
+    - By clicking "load more users", there shows more users and if there is no more, the button will be disabled.
+    - If admin searches something then clicks "load more users", there shows users that follows the search input.
+    - Only when admin refresh the page/clear all inputs then click "search" button will the "load more users" button shows all other users.
+ - Admin can change the password of the admin account.
+    - Just enter the old password and the new password then click "submit".
+
+User Account
+- Includes user_main and user_view
+- Visitors can register to become a user ('Sour User') or contact admin to become a pro user ('Sour Pro')
+- Deal with Movies:
+    - Visitors and any users are able to view a movie page.
+    - Any users are able to add movies to their collections, they can then view all movies in the collections later in the main page.
+- Deal with Article
+    - Any users can view articles that is written by pro users and they can like a article by click on heart shaped button inside the article.
+    - Only pro users are able to write article for each one of the movie.
+    - Only pro users can have a Article tab with articles written by their self listed.
+    - Only pro users are able to delete articles that was written by their self from the main page.
+- Deal with Short Reviews
+    - Any users are able to leave one short reviews to one of the movies in a movie page.
+    - Any users are able to view short reviews that was written by their self in the main page.
+    - Any users can delete any short reviews that was written by their self from their main page.
+- Deal with Users
+    - Any user can view other user's profile by click on their avatar that displayed on either comments.
+    - Any user are not able to modify other user's contents (for example, delete other's comments, articles or user information).
+    - Any user can view other user's following and follower num, number of likes they received, their displayable user info from their profile page.
+- Deal with their main_page
+    - Any users are able to change their avatar, it will be saved in the server.
+    - Any user are able to change their personal information:
+        - their user name
+        - their pass word
+        - their user description
+    - As talked above any users can view short reviews by click on them and delete short reviews they have added.
+    - Only pro users has their Article tab displayed, and they are able to view or delete them.
+    - Any users are able to keep tract of followers and following numbers they have, and number of likes they received.
+    - If they have written more than 10 short reviews or articles they can load more by click the button at the end of the list to display 10 more reviews/articles
+    - Any users are able to log out from the main page.
+--------------------------------------------------------------------------------
+
+Routes
+
+Rendering pages:
+  GET /index - rendering index page
+  GET /popuar - rendering Now Playing page
+  GET /admin - rendering admin pages
+  GET /user_main - rendering user main profile pages
+  GET /user_view/:id - rendering the other users' viewing page given the user id
+  GET /admin/lougout - log out of the admin
+  GET /article/:id - rendering article page given the article id
+  GET /signin - rendering sign in page
+  GET /signup - rendering sign up page
+  GET /movie/:mid - rendering movie page given the movie id
+
+Articles related routes: start with /api/articles
+  GET /loadUnreviewedArticle/:index - load unapproved articles given the page index, used in admin page
+  GET /loadReviewedArticle/:index - load approved articles given the page index, used in admin page
+  POST /approve/:id - approve the unapproved article given the article id, used in admin page
+  DELETE /:id - delete the article given id, used in admin page
+  POST /searchArticle/:index/:status - search articles by movie id, username, index of the page, and article status, used in admin page
+  GET /content/:id - Get the content of the article given the id, used in article page
+  GET /movies/:mid/:index - Find articles by movieID, used in admin page
+  POST /loveArticle/:id - Love the article, used in article page
+  GET /user/article/:user_id - get article of the user given user id, used in admin page
+
+Collections related routes: start with /api/collections
+  POST /:mid - add collection of the movie with the user from the cookie, used in movie page
+  DELETE /:mid - remove collection of the movie with the user from the cookie, used in movie page
+  GET /user/:user_id - get collections for current user
+
+Comments related routes: start with /api/comments
+  GET /top/:cid - Get the top comments given the movie id, used in movie page
+  GET /loadComment/:index - Get the comments given the page index, used in admin, userview, user main page
+  GET /total/likes/:id - Get the total number of likes, used in user main and user view page
+  POST /searchComment/:index - search comments by movie ID and username and given the page index, used in admin page
+  POST /like/:obj/:bool - Like or unlike the comment given the comment id, used in movie page
+  GET /userComments/:user_id - get comments for current user, used in user view page
+  GET /:mid/:index - get comments for movie and page index, used in movie page
+  DELETE /:cid delete the comment given comment id, used in user main and admin page
+
+Movie related routes: start with /api/movies
+  GET /movie/:mid - get a movie by movie id, used in admin page
+  POST /loadMovie/:index - load the movie given the page index, used in admin page
+  DELETE /:id - delete movie given id
+  GET /load_movies/:pid - load top 10 movies list, used in index page
+  GET /popular/movies - get popular movies array according to given pageNumber and pageSize, used in search page
+  GET /search/movies - get related movies array according to given pageNumber and pageSize, used in search page
+  POST /searchmovie/:index - search movie by ID and title, used in search page
+  GET /stars/:mid - get the stars given the movie id, used in index page
+  POST /add-new-movie/:id add new movie to the database, used in admin page
+  GET /:mid - get a movie by movie id
+
+User related routes: start with /api/users
+  GET /loadUser/:index - get all users, used in admin page
+  POST /username/:index - search user by username, used in admin page
+  DELETE /:id - delete the user given user id, used in admin page
+  DELETE /articlesncomments/:id - delete articles and comments with user id, used in admin page
+  DELETE /marticlesncommentsncollections/:id - delete articles and comments and collection with movie id, used in admin page
+  POST /userssw/:id - switch user's status, used in admin page
+  GET /admin/checkpw/:pw - check user's old password whether correct, used in user main and admin page
+  POST /admin/changepw/:pw - check the password, used in admin and user main page
+  POST /signin - log in
+  POST /signup - sign up
+  POST /comment/:mid - post a comment
+  POST /article/:mid - post an article
+  POST /user_main/avatar - upload new profile pic
+  GET /user/get_id - get user id
+  PATCH /user/change_info/:id update user name and comment, used in user main page
+  PATCH /user/increase_follower/:id - follow a user
+  PATCH /user/decrease_follower/:id - unfollow a user

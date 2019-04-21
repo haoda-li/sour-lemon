@@ -1,0 +1,46 @@
+button{
+  border: none;
+  background: none;
+}
+button:focus {
+  outline:0;
+}
+
+.header-logo{
+    height: 40px;
+}
+
+.logo_large{
+    height: 160px;
+}
+
+.menu_button {
+  float: right;
+  padding: 20px;
+}
+
+.header_simple {
+  background: linear-gradient(to bottom, rgba(105, 105, 105, 0.5), rgba(0, 0, 0, 0));
+}
+
+.dimgrey {
+  color: dimgrey;
+}
+.drawer_text{
+  margin: auto;
+  padding: 5px;
+  font-size: 12pt;
+  font-weight: 400;
+}
+
+.mdl-layout__drawer {
+  background-color: dimgrey;
+  border-right-color: dimgrey;
+}
+
+#search_input::placeholder{
+  color: rgba(255,255,255, 0.3);
+}
+#search_input2::placeholder{
+  color: rgba(255,255,255, 0.3);
+}

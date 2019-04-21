@@ -1,0 +1,70 @@
+/*Moive list*/
+.movie-card {
+    white-space: normal;
+    width: 94px;
+    color: #494949;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding-right: 30px;
+}
+.movie-card:hover{
+    cursor: pointer;
+}
+
+.rating {
+    font-size: 16px;
+    position: absolute;
+    left: -2px;
+    width: 24px;
+    height: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 99;
+    background: url('../assets/rating.png') 50%/contain no-repeat;
+}
+
+.rating span {
+    font-size: 12px;
+    color: #fff;
+    padding-bottom: 7px;
+    padding-right: 5px;
+}
+
+.moive-card-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 131px;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+.moive-card-bottom {
+    box-sizing: border-box;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 16px;
+    width: 100%;
+    height: 50px;
+    border-radius: 0 0 4px 4px;
+    word-break: break-all;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+}
+.moive-acidity {
+    color: #f6a623;
+    display: inline-block;
+    margin-left: 3px;
+}

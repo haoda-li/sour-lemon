@@ -1,6 +1,8 @@
 # Sour Lemon
 CSC309 Programming on Web Project  
 ---------------------------------
+URL: https://sourlemon47.herokuapp.com/  
+
 A web app that can read movie information, comment movies, and rate movies. Powered by TMDB (https://www.themoviedb.org/)
 
 

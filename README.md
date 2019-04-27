@@ -1,5 +1,4 @@
 # Sour Lemon (CSC309 Programming on Web Project)
----------------------------------
 URL: https://sourlemon47.herokuapp.com/  
 
 ## Description

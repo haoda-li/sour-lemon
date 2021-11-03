@@ -15,7 +15,7 @@
     "request": "^2.88.0",
     "rgbaster": "^2.1.1",
     "tiny-color-extractor": "^1.0.0",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {},
   "scripts": {
